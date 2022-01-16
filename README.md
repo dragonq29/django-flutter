@@ -6,3 +6,4 @@ python manage.py startapp {plan}
 python manage.py makemigrations # settings 추가한것들을 DB 반영
 python manage.py migrate
 python manage.py createsuperuser # 비밀번호 1234 했음
+python manage.py runserver
