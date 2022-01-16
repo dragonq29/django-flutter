@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-b!@5gr8z=c4ndsota=1bvh5@n0s72!or_(9+4l07&4$r&+y)&5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '10.0.2.2', # 플러터랑 연결하기위해 이걸 추가한다는데 왜 10.x.x.x인지 모르겠음
+    'localhost'
+]
 
 
 # Application definition
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'plan'
 ]
 
 MIDDLEWARE = [
