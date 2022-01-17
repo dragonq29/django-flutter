@@ -9,5 +9,5 @@ class TodoView(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
 
 class SolutionView(viewsets.ModelViewSet):
-    queryset = Solution.object.all()
+    queryset = Solution.objects.all()
     serializer_class = SolutionSerializer
