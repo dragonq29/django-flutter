@@ -10,3 +10,8 @@ python manage.py runserver
 
 python manage.py makemigrations # settings 추가한것들을 DB 반영
 python manage.py migrate
+
+# Solution API 추가 후 DB 반영
+
+python manage.py makemigrations # settings 추가한것들을 DB 반영
+python manage.py migrate
