@@ -4,6 +4,7 @@ from . import views
 from rest_framework import routers
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'plan/', views.TodoView, basename='plan')
+router.register(r'solution/', views.TodoView, basename='solution')
 urlpatterns = [
     path('', include(router.urls)),
 ]
