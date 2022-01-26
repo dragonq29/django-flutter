@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermobile/providers/task_provider.dart';
 import 'package:fluttermobile/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(PlanApp());
@@ -8,9 +10,11 @@ void main() {
 class PlanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '일정관리',
-      home: HomeScreen()
-    );
+    return ChangeNotifierProvider(
+        create: (context) => PlanProvider(),
+        child: MaterialApp(
+          title: '일정관리',
+          home: HomeScreen()
+    ));
   }
 }

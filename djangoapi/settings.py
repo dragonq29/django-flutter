@@ -26,9 +26,18 @@ SECRET_KEY = 'django-insecure-b!@5gr8z=c4ndsota=1bvh5@n0s72!or_(9+4l07&4$r&+y)&5
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '10.0.2.2', # 플러터랑 연결하기위해 이걸 추가한다는데 왜 10.x.x.x인지 모르겠음
     'localhost'
 ]
+
+# CORS_ALLOWED_ORIGINS = [
+# 	# 허용할 Origin 추가
+#     "https://example.com",
+#     "https://sub.example.com",
+#     "http://localhost:8080",
+#     "http://127.0.0.1:9000"
+# ]
+# 상황에 따라 모든 도메인에 대해서도 추가가 가능합니다
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -41,10 +50,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'plan',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', #최상단에 추가해주기
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
